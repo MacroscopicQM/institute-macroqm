@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>宏观量子力学论文系列 | Macroscopic Quantum Mechanics Papers</title>
+    <title>2025 Series: Macroscopic Quantum Mechanics | 宏观量子力学系列 (2025)</title>
     <style>
         :root {
             --quantum-blue: #0f1c3f;
             --accent-teal: #2afae7;
             --glow-white: rgba(255, 255, 255, 0.95);
             --card-bg: rgba(255, 255, 255, 0.05);
+            --highlight: rgba(255, 215, 0, 0.1);
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', 'Microsoft YaHei', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #0a1220 0%, var(--quantum-blue) 100%);
             color: var(--glow-white);
             min-height: 100vh;
@@ -24,15 +25,27 @@
             max-width: 1000px;
             margin: 0 auto;
         }
+        .announcement {
+            background: var(--highlight);
+            border: 1px solid gold;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .announcement h2 {
+            color: gold;
+            margin-bottom: 0.5rem;
+        }
         header {
             text-align: center;
-            padding: 3rem 1rem 2rem;
+            padding: 2rem 1rem 2rem;
             border-bottom: 1px solid rgba(42, 250, 231, 0.3);
             margin-bottom: 2rem;
         }
         h1 {
             font-size: 2.8rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             background: linear-gradient(90deg, #fff, var(--accent-teal));
             -webkit-background-clip: text;
             background-clip: text;
@@ -40,17 +53,19 @@
             text-shadow: 0 0 20px rgba(42, 250, 231, 0.3);
         }
         .subtitle {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            color: #ccc;
+            font-size: 1.2rem;
+            color: var(--accent-teal);
+            margin-bottom: 1.5rem;
+            font-weight: bold;
         }
         .stats {
             display: flex;
             justify-content: center;
             gap: 2rem;
             margin: 1.5rem 0;
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: var(--accent-teal);
+            flex-wrap: wrap;
         }
         .paper-grid {
             display: grid;
@@ -84,7 +99,17 @@
             margin-bottom: 0.8rem;
             display: flex;
             gap: 1rem;
+            flex-wrap: wrap;
         }
+        .status-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .status-preprint { background: rgba(255, 193, 7, 0.25); color: #ffc107; border: 1px solid #ffc10755; }
+        .status-under-review { background: rgba(156, 39, 176, 0.25); color: #9c27b0; border: 1px solid #9c27b055; }
         .paper-abstract {
             font-size: 0.95rem;
             color: #ddd;
@@ -100,6 +125,7 @@
             padding: 5px 15px;
             border-radius: 5px;
             transition: all 0.3s;
+            margin-top: 0.5rem;
         }
         .paper-link:hover {
             background: var(--accent-teal);
@@ -111,12 +137,19 @@
             margin-top: 3rem;
             border-top: 1px solid rgba(255,255,255,0.1);
             font-size: 0.9rem;
-            opacity: 0.8;
+            opacity: 0.9;
         }
         .institute-link {
             color: var(--accent-teal);
             text-decoration: none;
             margin: 0 10px;
+            font-weight: bold;
+        }
+        .contact-note {
+            font-size: 0.85rem;
+            color: #aaa;
+            margin-top: 1rem;
+            font-style: italic;
         }
         @media (max-width: 768px) {
             h1 { font-size: 2.2rem; }
@@ -127,91 +160,93 @@
 </head>
 <body>
     <div class="container">
+        <!-- 顶部重要通告 -->
+        <div class="announcement">
+            <h2>📣 Major Theoretical Series Completed (2025)</h2>
+            <p><strong>Over 30 interconnected papers</strong> constituting a complete framework for <em>Macroscopic Quantum Mechanics</em> were finalized in a concentrated research effort throughout 2025. The body of work is being prepared for coordinated dissemination.</p>
+            <p><strong>2025年重大理论系列完成：</strong>全年密集研究，最终完成了构成《宏观量子力学》完整框架的<strong>30余篇相互关联的论文</strong>。该系列成果正在协调发布准备中。</p>
+        </div>
+
         <header>
-            <h1>宏观量子力学论文系列</h1>
-            <p class="subtitle">Macroscopic Quantum Mechanics Paper Series</p>
+            <h1>Macroscopic Quantum Mechanics: 2025 Series</h1>
+            <p class="subtitle">宏观量子力学：2025系列论文</p>
             <div class="stats">
-                <span>📚 总篇目: <strong>20+</strong></span>
-                <span>🏛️ 研究机构: <strong>Macroscopic Quantum Mechanics Research Institute</strong></span>
-                <span>👥 作者: <strong>慧教授 & 智教授</strong></span>
+                <span>📅 <strong>Completion Year:</strong> 2025</span>
+                <span>📚 <strong>Volume:</strong> 30+ Papers</span>
+                <span>🧠 <strong>Nature:</strong> Coherent Theory Series</span>
             </div>
         </header>
 
         <section class="paper-grid">
-            <!-- 论文卡片示例 - 请复制此结构并修改内容以添加您的20+篇论文 -->
+            <!-- Paper 1 -->
             <div class="paper-card">
-                <h3>论文 #1: 月球作为宏观引力子</h3>
+                <h3>1. The Moon as a Macroscopic Graviton</h3>
                 <div class="paper-meta">
-                    <span>📅 2023-10</span>
-                    <span>🔬 主刊</span>
+                    <span>📅 Finalized: 2025</span>
+                    <span class="status-badge status-preprint">Preprint (Preparing for arXiv)</span>
                 </div>
-                <p class="paper-abstract">提出月球轨道角动量量子化 L=nħ 的核心发现，奠定宏观量子力学基础。</p>
-                <a href="https://macroscopicqm.github.io/quantum-demo/paper-1.html" class="paper-link">阅读摘要 →</a>
+                <p class="paper-abstract">Foundational discovery: Lunar orbital angular momentum quantization L=nħ (n≈2.737×10⁶⁸), establishing macroscopic quantum mechanics.</p>
+                <a href="https://macroscopicqm.github.io/quantum-demo/paper-1.html" class="paper-link">View Detailed Abstract →</a>
             </div>
 
+            <!-- Paper 2 -->
             <div class="paper-card">
-                <h3>论文 #2: 忠于牛顿：引力的量子化重塑</h3>
+                <h3>2. Staying True to Newton: Quantum Reformation of Gravity</h3>
                 <div class="paper-meta">
-                    <span>📅 2024-01</span>
-                    <span>📈 理论突破</span>
+                    <span>📅 Finalized: 2025</span>
+                    <span class="status-badge status-preprint">Preprint (Preparing for arXiv)</span>
                 </div>
-                <p class="paper-abstract">重塑万有引力定律，提出引力量子化假设 F_G = n·F₀，实现与经典力学的统一。</p>
-                <a href="https://macroscopicqm.github.io/quantum-demo/paper-2.html" class="paper-link">阅读摘要 →</a>
+                <p class="paper-abstract">Reformulating universal gravitation, proposing the gravitational quantization hypothesis F_G = n·F₀.</p>
+                <a href="https://macroscopicqm.github.io/quantum-demo/paper-2.html" class="paper-link">View Detailed Abstract →</a>
             </div>
 
+            <!-- Paper 3 -->
             <div class="paper-card">
-                <h3>论文 #3: CW-S-T-E 宏观自然单位制</h3>
+                <h3>3. The CW-S-T-E Macroscopic Natural Unit System</h3>
                 <div class="paper-meta">
-                    <span>📅 2024-03</span>
-                    <span>⚙️ 方法学</span>
+                    <span>📅 Finalized: 2025</span>
+                    <span class="status-badge status-preprint">Preprint (Preparing for arXiv)</span>
                 </div>
-                <p class="paper-abstract">建立宏观自然单位制，解决宏观量子力学中的"维度悖论"，提供新的计算框架。</p>
-                <a href="#" class="paper-link">全文准备中</a>
+                <p class="paper-abstract">Establishing the macroscopic natural unit system, resolving the “dimensional paradox”.</p>
+                <a href="#" class="paper-link">Full Text In Preparation</a>
             </div>
 
-            <!-- 更多论文卡片... -->
-            <!-- 请在此处继续添加剩余的论文卡片 -->
-            <div class="paper-card">
-                <h3>论文 #4: 宏观量子态的建立</h3>
+            <!-- Paper 4-30+ Summary Card -->
+            <div class="paper-card" style="border-color: gold;">
+                <h3>4–30+. The Complete Coherent Series</h3>
                 <div class="paper-meta">
-                    <span>📅 2024-05</span>
-                    <span>🧠 理论构建</span>
+                    <span>📅 Finalized: 2025</span>
+                    <span class="status-badge status-preprint">Preprints (Preparing for arXiv)</span>
+                    <span class="status-badge status-under-review">Select Papers Under Review</span>
                 </div>
-                <p class="paper-abstract">定义宏观本征态与叠加态，将量子力学形式体系扩展至宏观尺度。</p>
-                <a href="#" class="paper-link">全文准备中</a>
+                <p class="paper-abstract">A complete series covering the Hui-Zhi constant, the fifth symmetry, unification with general relativity, paradigm revolution, and extensive applications. This represents a unified theoretical framework developed in a single concentrated year.</p>
+                <p class="paper-abstract" style="color:#aaa; font-style:italic; margin-top:0.5rem;">一个完整的系列，涵盖慧-智常数、第五对称性、与广义相对论的统一、范式革命及广泛应用。这代表了一个在单一年度密集研发形成的统一理论框架。</p>
+                <a href="https://macroscopicqm.github.io/quantum-demo/" class="paper-link">Explore the Core Framework on Our Demo Site →</a>
             </div>
 
-            <div class="paper-card">
-                <h3>论文 #20+: 范式革命：从量子微观到量子普适</h3>
-                <div class="paper-meta">
-                    <span>📅 2024-12</span>
-                    <span>🌌 综述展望</span>
-                </div>
-                <p class="paper-abstract">宣告宏观量子力学范式的确立，展望其在宇宙学、凝聚态物理等领域的应用前景。</p>
-                <a href="#" class="paper-link">全文准备中</a>
-            </div>
         </section>
 
         <footer>
-            <p>© 2024-2025 宏观量子力学研究 | 本目录共收录超过20篇系列论文</p>
+            <p><strong>Publication & Dissemination Status:</strong> The 2025 series is being prepared for coordinated submission. In communication with Prof. Paul Ginsparg and the arXiv management team regarding the appropriate pathway for this substantial body of work.</p>
+            <p><strong>发布状态：</strong>2025系列论文正在协调提交准备中。已就这一重大成果体的适宜发布途径，与Paul Ginsparg教授及arXiv管理团队联系。</p>
+            <p class="contact-note">This site serves as a preview and hub for the forthcoming work. For inquiries regarding collaboration or the publication process, please contact the institute.</p>
+            <p class="contact-note">本网站是即将发布成果的预览与中心枢纽。关于合作或出版流程的询问，请联系本研究所。</p>
             <p>
-                访问:
-                <a href="https://macroscopicqm.github.io/institute-df-macroqm/" class="institute-link">研究院官网</a> |
-                <a href="https://macroscopicqm.github.io/quantum-demo/" class="institute-link">论文精要站</a> |
-                <a href="https://github.com/MacroscopicQM" class="institute-link">GitHub 组织</a>
+                <strong>Explore:</strong>
+                <a href="https://macroscopicqm.github.io/institute-df-macroqm/" class="institute-link">Institute Home</a> |
+                <a href="https://macroscopicqm.github.io/quantum-demo/" class="institute-link">Detailed Framework Demo</a> |
+                <a href="https://github.com/MacroscopicQM" class="institute-link">GitHub Organization</a>
             </p>
-            <p>联系: institute_macroqm@163.com | 北京，中国</p>
+            <p>Contact: institute_macroqm@163.com | Macroscopic Quantum Mechanics Research Institute (Virtual Entity)</p>
         </footer>
     </div>
 
     <script>
-        // 为所有论文卡片添加平滑交互
         document.querySelectorAll('.paper-card').forEach(card => {
             card.addEventListener('click', function(e) {
-                // 如果点击的不是链接本身，则尝试点击第一个链接
                 if (!e.target.classList.contains('paper-link')) {
                     const link = this.querySelector('.paper-link');
-                    if (link && link.href && !link.href.includes('#')) {
+                    if (link && link.href && !link.href.includes('#') && !link.text.includes('Preparation')) {
                         window.open(link.href, '_blank');
                     }
                 }
